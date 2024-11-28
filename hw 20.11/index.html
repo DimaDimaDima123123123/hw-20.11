@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container 
+        {
+            background-color: lightblue;
+            width: 40%;
+        }
+
+        .form-container h2 
+        {
+            text-align: center;
+            background-color: darkblue;
+            color: white;
+            padding: 10px 0;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .form-container table 
+        {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"],
+        .form-container textarea,
+        .form-container select
+         {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-container input:invalid
+         {
+            border: 2px solid black;
+        }
+
+        .form-container input:valid 
+        {
+            border: 2px solid green;
+        }
+
+        .form-container input[type="checkbox"],
+        .form-container input[type="radio"] 
+        {
+            margin-right: 5px;
+        }
+
+        .form-container .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-container button 
+        {
+            padding: 5px 15px;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Регистрация на сервере:</h2>
+        <form>
+            <table>
+                <tr>
+                    <td>Логин:</td>
+                    <td><input name="login" minlength="5" required></td>
+                </tr>
+                <tr>
+                    <td>Пароль:</td>
+                    <td><input name="password" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td>Подтверждение:</td>
+                    <td><input name="confirm_password" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td>Полное имя (ФИО):</td>
+                    <td><input name="fullname" minlength="6" required></td>
+                </tr>
+                <tr>
+                    <td>Пол:</td>
+                    <td>
+                        <input type="radio" name="gender" required> мужской
+                        <input type="radio" name="gender"> женский
+                    </td>
+                </tr>
+                <tr>
+                    <td>Иностранные языки:</td>
+                    <td>
+                        <input type="checkbox" name="lang"> Английский<br>
+                        <input type="checkbox" name="lang"> Немецкий<br>
+                        <input type="checkbox" name="lang"> Французский<br>
+                        <input type="checkbox" name="lang"> Испанский<br>
+                        <input type="checkbox" name="lang"> Итальянский
+</td>
+                </tr>
+                <tr>
+                    <td>Сфера деятельности:</td>
+                    <td>
+                        <select name="field" required>
+                            <option value="образование">образование</option>
+                            <option value="медицина">медицина</option>
+                            <option value="информационные технологии">информационные технологии</option>
+                            <option value="наука">наука</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>e-mail:</td>
+                    <td><input name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Дополнительная информация:</td>
+                    <td><textarea name="info" rows="4"></textarea></td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <button class="submit" type="submit">Готово</button>
+                <button class="reset" type="reset">Сброс</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
